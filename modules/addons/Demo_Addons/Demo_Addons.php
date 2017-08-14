@@ -73,7 +73,7 @@ function Demo_Addons_OutPut($vars)
      */
 
     // 后台需要输出的内容
-    echo 'xxx';
+    echo 'Demo Content';
 }
 
 // 前台输出
@@ -85,6 +85,16 @@ function Demo_Addons_ClientArea($vars)
      * 你可以在下方使用 $vars 中的内容，具体可 print_r 打印出来看一下
      */
 
-    // 后台需要输出的内容
-    echo 'xxx';
+    // 后台需要返回的内容
+    return [
+        'pagetitle' => '演示模块', // 前台页面标题
+        'breadcrumb' => ['index.php?m=Demo_Addons'=>'Demo Addons'], // 面包屑导航
+        'templatefile' => 'clientarea', // Smarty 模板文件、不带后缀
+        'requirelogin' => true, // 是否需要客户登陆了才能看到
+        'forcessl' => false, // 是否强制 SSL 访问
+        'vars' => [ // 传给 Smarty 的变量
+            'a' => 'b',
+            'c' => 'd'
+        ]
+    ];
 }
