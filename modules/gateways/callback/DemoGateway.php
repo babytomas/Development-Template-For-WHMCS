@@ -1,10 +1,15 @@
 <?php
 /**
+ * WHMCS 根路径
+ */
+defined('ROOTDIR') OR define('ROOTDIR', dirname(dirname(dirname(__DIR__))));
+
+/**
  * 引入相关 WHMCS 文件
  */
-require_once dirname(dirname(dirname(__DIR__))) . '/init.php';
-require_once dirname(dirname(dirname(__DIR__))) . '/includes/gatewayfunctions.php';
-require_once dirname(dirname(dirname(__DIR__))) . '/includes/invoicefunctions.php';
+include_once ROOTDIR . '/init.php';
+include_once ROOTDIR . '/includes/gatewayfunctions.php';
+include_once ROOTDIR . '/includes/invoicefunctions.php';
 
 /**
  * 模块名称
@@ -33,10 +38,8 @@ $status = 'Success'; // 成功状态 ( 用于记录日志, 有 Success / Failure
  */
 $sign = null; // 根据需求自行编写判断内容
 
-if (!$sign)
-{
-    die('签名有误');
-}
+// 签名有误提示
+$sign OR die('Invalid signature');
 
 /**
  * 检查账单 ( 不存在则执行 die )
@@ -56,12 +59,12 @@ logTransaction($moduleVars['name'], $_POST, $status);
 /**
  * 检查是否已支付
  */
-$paid = null; // 根据需求自行编写判断内容
+$paid = null; // 根据需求自行编写判断内容并将结果赋值给变量
 
-if ($paid)
-{
-    /**
-     * 记录流水信息
-     */
-    addInvoicePayment($invoiceId, $transactionId, $amount, $fee, $moduleName);
-}
+// 未付款提示
+$paid OR die('Invoice unpaid');
+
+/**
+ * 记录流水信息
+ */
+addInvoicePayment($invoiceId, $transactionId, $amount, $fee, $moduleName);

@@ -2,7 +2,7 @@
 /**
  * 禁止 WHMCS 外直接访问
  */
-defined("WHMCS") OR die('Access Denied');
+defined('WHMCS') OR die('Access Denied');
 
 /**
  * 模块信息
@@ -36,7 +36,7 @@ function DemoServer_TestConnection($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -75,7 +75,7 @@ function DemoServer_ConfigOptions($vars)
      * 传入信息
      */
     print_r($vars);
-    die(); // 可执行慈航打印展示
+    die(); // 可执行测试打印展示
 
     /**
      * 返回结果
@@ -84,66 +84,66 @@ function DemoServer_ConfigOptions($vars)
         /**
          * 文字输入框
          */
-        'text'     => [
+        'text' => [
             'FriendlyName' => '文字输入框',
-            'Type'         => 'text',
-            'Size'         => '25',
-            'Default'      => '',
-            'Description'  => '内容较短时可以使用此组件',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => '内容较短时可以使用此组件',
         ],
         /**
          * 密码输入框
          */
         'password' => [
             'FriendlyName' => '密码输入框',
-            'Type'         => 'password',
-            'Size'         => '25',
-            'Default'      => '',
-            'Description'  => '需要收集密码时可使用此组件',
+            'Type' => 'password',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => '需要收集密码时可使用此组件',
         ],
         /**
          * 多选框
          */
         'checkbox' => [
             'FriendlyName' => '多选框',
-            'Type'         => 'yesno',
-            'Description'  => '需要使用布尔型内容时可使用此组件',
+            'Type' => 'yesno',
+            'Description' => '需要使用布尔型内容时可使用此组件',
         ],
         /**
          * 下拉框
          */
         'dropdown' => [
             'FriendlyName' => '下拉框',
-            'Type'         => 'dropdown',
-            'Options'      => [
+            'Type' => 'dropdown',
+            'Options' => [
                 '选项1',
                 '选项2',
                 '选项...'
             ],
-            'Description'  => '有多个选项但只能单选, 需要下拉框时可以使用此组件',
+            'Description' => '有多个选项但只能单选, 需要下拉框时可以使用此组件',
         ],
         /**
          * 单选框
          */
-        'radio'    => [
+        'radio' => [
             'FriendlyName' => '单选框',
-            'Type'         => 'radio',
-            'Options'      => [
+            'Type' => 'radio',
+            'Options' => [
                 '选项1',
                 '选项2',
                 '选项...'
             ],
-            'Description'  => '有多个选项但只能单选时可以使用此组件',
+            'Description' => '有多个选项但只能单选时可以使用此组件',
         ],
         /**
          * 文字区输入框
          */
         'textarea' => [
             'FriendlyName' => '文字区输入框',
-            'Type'         => 'textarea',
-            'Rows'         => '3',
-            'Cols'         => '60',
-            'Description'  => '比较多的文字内容可使用此组件',
+            'Type' => 'textarea',
+            'Rows' => '3',
+            'Cols' => '60',
+            'Description' => '比较多的文字内容可使用此组件',
         ],
     ];
 }
@@ -163,7 +163,7 @@ function DemoServer_CreateAccount($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -186,11 +186,13 @@ function DemoServer_CreateAccount($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -214,7 +216,7 @@ function DemoServer_SuspendAccount($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -237,11 +239,13 @@ function DemoServer_SuspendAccount($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -265,7 +269,7 @@ function DemoServer_UnSuspendAccount($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -288,11 +292,13 @@ function DemoServer_UnSuspendAccount($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -316,7 +322,7 @@ function DemoServer_TerminateAccount($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -339,11 +345,13 @@ function DemoServer_TerminateAccount($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -367,7 +375,7 @@ function DemoServer_ChangePassword($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -390,11 +398,13 @@ function DemoServer_ChangePassword($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -418,7 +428,7 @@ function DemoServer_ChangePackage($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -441,11 +451,13 @@ function DemoServer_ChangePackage($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -469,7 +481,7 @@ function DemoServer_Renew($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -492,11 +504,13 @@ function DemoServer_Renew($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -520,7 +534,7 @@ function DemoServer_DemoFunction($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -543,11 +557,13 @@ function DemoServer_DemoFunction($vars)
         /**
          * 记录日志
          */
-        logModuleCall($moduleName, // 模块名称
+        logModuleCall(
+            $moduleName, // 模块名称
             __FUNCTION__, // 函数名称
             $vars, // 记录传值
             $e->getMessage(), // 记录错误信息
-            $e->getTraceAsString());
+            $e->getTraceAsString()
+        );
 
         /**
          * 返回错误
@@ -571,7 +587,7 @@ function DemoServer_ClientArea($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -590,16 +606,15 @@ function DemoServer_ClientArea($vars)
          * 返回变量
          */
         $result = [
-            'title'   => '出现错误',
+            'title' => '出现错误',
             'message' => $e->getMessage()
         ];
     }
     finally
     {
         return [
-            'tabOverviewReplacementTemplate' => 'clientarea',
-            'templateVariables'              => $result
-                ?: []
+            'tabOverviewReplacementTemplate' => 'clientarea', // 模板名称 ( 不需要包含后缀 )
+            'templateVariables' => $result ?: [] // 传入模板的变量
         ];
     }
 }
@@ -612,8 +627,7 @@ function DemoServer_ClientArea($vars)
 function DemoServer_ClientAreaCustomButtonArray()
 {
     return [
-        '演示功能' => 'DemoFunction'
-        // 按钮触发的函数
+        '演示功能' => 'DemoFunction' // 按钮触发的函数
     ];
 }
 
@@ -625,8 +639,7 @@ function DemoServer_ClientAreaCustomButtonArray()
 function DemoServer_ClientAreaAllowedFunctions()
 {
     return [
-        '演示功能' => 'DemoFunction'
-        // 触发的函数
+        '演示功能' => 'DemoFunction' // 触发的函数
     ];
 }
 
@@ -638,8 +651,7 @@ function DemoServer_ClientAreaAllowedFunctions()
 function DemoServer_AdminCustomButtonArray()
 {
     return [
-        '演示功能' => 'DemoFunction'
-        // 按钮触发的函数
+        '演示功能' => 'DemoFunction' // 按钮触发的函数
     ];
 }
 
@@ -656,7 +668,7 @@ function DemoServer_AdminServicesTabFields($vars)
      * 传入信息
      */
     print_r($vars);
-    die(); // 可执行慈航打印展示
+    die(); // 可执行测试打印展示
 
     /**
      * 需要处理的内容
@@ -683,9 +695,9 @@ function DemoServer_AdminServicesTabFieldsSave($vars)
      * 传入信息
      */
     print_r($vars);
-    die(); // 可执行慈航打印展示
+    die(); // 可执行测试打印展示
 
     /**
-     * 获取 _POST 的信息并编写自己保存时所执行的代码
+     * 获取 POST 的信息并编写自己保存时所执行的代码
      */
 }

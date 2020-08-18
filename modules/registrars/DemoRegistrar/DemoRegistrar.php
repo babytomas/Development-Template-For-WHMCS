@@ -2,7 +2,7 @@
 /**
  * 禁止 WHMCS 外直接访问
  */
-defined("WHMCS") OR die('Access Denied');
+defined('WHMCS') OR die('Access Denied');
 
 use WHMCS\Domains\DomainLookup\ResultsList;
 use WHMCS\Domains\DomainLookup\SearchResult;
@@ -22,72 +22,72 @@ function DemoRegistrar_GetConfigArray()
          * 模块名称
          */
         'FriendlyName' => [
-            'Type'  => 'System',
+            'Type' => 'System',
             'Value' => '某某支付',
         ],
         /**
          * 文字输入框
          */
-        'text'         => [
+        'text' => [
             'FriendlyName' => '文字输入框',
-            'Type'         => 'text',
-            'Size'         => '25',
-            'Default'      => '',
-            'Description'  => '内容较短时可以使用此组件',
+            'Type' => 'text',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => '内容较短时可以使用此组件',
         ],
         /**
          * 密码输入框
          */
-        'password'     => [
+        'password' => [
             'FriendlyName' => '密码输入框',
-            'Type'         => 'password',
-            'Size'         => '25',
-            'Default'      => '',
-            'Description'  => '需要收集密码时可使用此组件',
+            'Type' => 'password',
+            'Size' => '25',
+            'Default' => '',
+            'Description' => '需要收集密码时可使用此组件',
         ],
         /**
          * 多选框
          */
-        'checkbox'     => [
+        'checkbox' => [
             'FriendlyName' => '多选框',
-            'Type'         => 'yesno',
-            'Description'  => '需要使用布尔型内容时可使用此组件',
+            'Type' => 'yesno',
+            'Description' => '需要使用布尔型内容时可使用此组件',
         ],
         /**
          * 下拉框
          */
-        'dropdown'     => [
+        'dropdown' => [
             'FriendlyName' => '下拉框',
-            'Type'         => 'dropdown',
-            'Options'      => [
+            'Type' => 'dropdown',
+            'Options' => [
                 '选项1',
                 '选项2',
                 '选项...'
             ],
-            'Description'  => '有多个选项但只能单选, 需要下拉框时可以使用此组件',
+            'Description' => '有多个选项但只能单选, 需要下拉框时可以使用此组件',
         ],
         /**
          * 单选框
          */
-        'radio'        => [
+        'radio' => [
             'FriendlyName' => '单选框',
-            'Type'         => 'radio',
-            'Options'      => [
+            'Type' => 'radio',
+            'Options' => [
                 '选项1',
                 '选项2',
                 '选项...'
             ],
-            'Description'  => '有多个选项但只能单选时可以使用此组件',
+            'Description' => '有多个选项但只能单选时可以使用此组件',
         ],
         /**
          * 文字区输入框
          */
-        'textarea'     => [
+        'textarea' => [
             'FriendlyName' => '文字区输入框',
-            'Type'         => 'textarea',
-            'Rows'         => '3',
-            'Cols'         => '60',
-            'Description'  => '比较多的文字内容可使用此组件',
+            'Type' => 'textarea',
+            'Rows' => '3',
+            'Cols' => '60',
+            'Description' => '比较多的文字内容可使用此组件',
         ],
     ];
 }
@@ -107,7 +107,7 @@ function DemoRegistrar_RegisterDomain($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -148,7 +148,7 @@ function DemoRegistrar_TransferDomain($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -189,7 +189,7 @@ function DemoRegistrar_RenewDomain($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -230,7 +230,7 @@ function DemoRegistrar_GetNameservers($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -243,11 +243,11 @@ function DemoRegistrar_GetNameservers($vars)
          */
         return [
             'success' => true,
-            'ns1'     => '服务器 1',
-            'ns2'     => '服务器 2',
-            'ns3'     => '服务器 3',
-            'ns4'     => '服务器 4',
-            'ns5'     => '服务器 5',
+            'ns1' => 'ns1.example.com', // 服务器 1
+            'ns2' => 'ns2.example.com', // 服务器 2
+            'ns3' => 'ns3.example.com', // 服务器 3
+            'ns4' => 'ns4.example.com', // 服务器 4
+            'ns5' => 'ns5.example.com', // 服务器 5
         ];
     }
     catch (Exception $e)
@@ -276,7 +276,7 @@ function DemoRegistrar_SaveNameservers($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -317,7 +317,7 @@ function DemoRegistrar_GetContactDetails($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -333,69 +333,69 @@ function DemoRegistrar_GetContactDetails($vars)
              * 注册人
              */
             'Registrant' => [
-                'First Name'    => '名字',
-                'Last Name'     => '姓氏',
-                'Company Name'  => '公司名',
+                'First Name' => '名字',
+                'Last Name' => '姓氏',
+                'Company Name' => '公司名',
                 'Email Address' => '邮箱地址',
-                'Address 1'     => '地址 1',
-                'Address 2'     => '地址 2',
-                'City'          => '城市',
-                'State'         => '省份',
-                'Postcode'      => '邮编',
-                'Country'       => '国家',
-                'Phone Number'  => '手机',
-                'Fax Number'    => '传真号码',
+                'Address 1' => '地址 1',
+                'Address 2' => '地址 2',
+                'City' => '城市',
+                'State' => '省份',
+                'Postcode' => '邮编',
+                'Country' => '国家',
+                'Phone Number' => '手机',
+                'Fax Number' => '传真号码',
             ],
             /**
              * 技术员
              */
-            'Technical'  => [
-                'First Name'    => '名字',
-                'Last Name'     => '姓氏',
-                'Company Name'  => '公司名',
+            'Technical' => [
+                'First Name' => '名字',
+                'Last Name' => '姓氏',
+                'Company Name' => '公司名',
                 'Email Address' => '邮箱地址',
-                'Address 1'     => '地址 1',
-                'Address 2'     => '地址 2',
-                'City'          => '城市',
-                'State'         => '省份',
-                'Postcode'      => '邮编',
-                'Country'       => '国家',
-                'Phone Number'  => '手机',
-                'Fax Number'    => '传真号码',
+                'Address 1' => '地址 1',
+                'Address 2' => '地址 2',
+                'City' => '城市',
+                'State' => '省份',
+                'Postcode' => '邮编',
+                'Country' => '国家',
+                'Phone Number' => '手机',
+                'Fax Number' => '传真号码',
             ],
             /**
              * 付款人
              */
-            'Billing'    => [
-                'First Name'    => '名字',
-                'Last Name'     => '姓氏',
-                'Company Name'  => '公司名',
+            'Billing' => [
+                'First Name' => '名字',
+                'Last Name' => '姓氏',
+                'Company Name' => '公司名',
                 'Email Address' => '邮箱地址',
-                'Address 1'     => '地址 1',
-                'Address 2'     => '地址 2',
-                'City'          => '城市',
-                'State'         => '省份',
-                'Postcode'      => '邮编',
-                'Country'       => '国家',
-                'Phone Number'  => '手机',
-                'Fax Number'    => '传真号码',
+                'Address 1' => '地址 1',
+                'Address 2' => '地址 2',
+                'City' => '城市',
+                'State' => '省份',
+                'Postcode' => '邮编',
+                'Country' => '国家',
+                'Phone Number' => '手机',
+                'Fax Number' => '传真号码',
             ],
             /**
              * 管理员
              */
-            'Admin'      => [
-                'First Name'    => '名字',
-                'Last Name'     => '姓氏',
-                'Company Name'  => '公司名',
+            'Admin' => [
+                'First Name' => '名字',
+                'Last Name' => '姓氏',
+                'Company Name' => '公司名',
                 'Email Address' => '邮箱地址',
-                'Address 1'     => '地址 1',
-                'Address 2'     => '地址 2',
-                'City'          => '城市',
-                'State'         => '省份',
-                'Postcode'      => '邮编',
-                'Country'       => '国家',
-                'Phone Number'  => '手机',
-                'Fax Number'    => '传真号码',
+                'Address 1' => '地址 1',
+                'Address 2' => '地址 2',
+                'City' => '城市',
+                'State' => '省份',
+                'Postcode' => '邮编',
+                'Country' => '国家',
+                'Phone Number' => '手机',
+                'Fax Number' => '传真号码',
             ],
         ];
     }
@@ -425,7 +425,7 @@ function DemoRegistrar_SaveContactDetails($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -466,7 +466,7 @@ function DemoRegistrar_CheckAvailability($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 发起请求
@@ -488,21 +488,20 @@ function DemoRegistrar_CheckAvailability($vars)
             /**
              * 检查域名状态
              */
-            if ($item['status'] == 'available')
+            switch ($item['status'])
             {
-                $status = SearchResult::STATUS_NOT_REGISTERED;
-            }
-            else if ($item['statis'] == 'registered')
-            {
-                $status = SearchResult::STATUS_REGISTERED;
-            }
-            else if ($item['statis'] == 'reserved')
-            {
-                $status = SearchResult::STATUS_RESERVED;
-            }
-            else
-            {
-                $status = SearchResult::STATUS_TLD_NOT_SUPPORTED;
+                case 'available':
+                    $status = SearchResult::STATUS_NOT_REGISTERED;
+                    break;
+                case 'registered':
+                    $status = SearchResult::STATUS_REGISTERED;
+                    break;
+                case 'reserved':
+                    $status = SearchResult::STATUS_RESERVED;
+                    break;
+                default:
+                    $status = SearchResult::STATUS_TLD_NOT_SUPPORTED;
+
             }
 
             /**
@@ -521,18 +520,9 @@ function DemoRegistrar_CheckAvailability($vars)
                  * 设置溢价价格
                  */
                 $searchResult->setPremiumCostPricing([
-                    /**
-                     * 域名注册价格
-                     */
-                    'register'     => $item['premiumRegistrationPrice'],
-                    /**
-                     * 域名续费价格
-                     */
-                    'renew'        => $item['premiumRenewPrice'],
-                    /**
-                     * 货币代码
-                     */
-                    'CurrencyCode' => 'USD',
+                    'register' => $item['premiumRegistrationPrice'], // 域名注册价格
+                    'renew' => $item['premiumRenewPrice'], // 域名续费价格
+                    'CurrencyCode' => 'USD', // 货币代码
                 ]);
             }
 
@@ -580,7 +570,7 @@ function DemoRegistrar_GetDomainSuggestions($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 发起请求
@@ -591,7 +581,7 @@ function DemoRegistrar_GetDomainSuggestions($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 发起请求
@@ -613,21 +603,20 @@ function DemoRegistrar_GetDomainSuggestions($vars)
             /**
              * 检查域名状态
              */
-            if ($item['status'] == 'available')
+            switch ($item['status'])
             {
-                $status = SearchResult::STATUS_NOT_REGISTERED;
-            }
-            else if ($item['statis'] == 'registered')
-            {
-                $status = SearchResult::STATUS_REGISTERED;
-            }
-            else if ($item['statis'] == 'reserved')
-            {
-                $status = SearchResult::STATUS_RESERVED;
-            }
-            else
-            {
-                $status = SearchResult::STATUS_TLD_NOT_SUPPORTED;
+                case 'available':
+                    $status = SearchResult::STATUS_NOT_REGISTERED;
+                    break;
+                case 'registered':
+                    $status = SearchResult::STATUS_REGISTERED;
+                    break;
+                case 'reserved':
+                    $status = SearchResult::STATUS_RESERVED;
+                    break;
+                default:
+                    $status = SearchResult::STATUS_TLD_NOT_SUPPORTED;
+
             }
 
             /**
@@ -646,18 +635,9 @@ function DemoRegistrar_GetDomainSuggestions($vars)
                  * 设置溢价价格
                  */
                 $searchResult->setPremiumCostPricing([
-                    /**
-                     * 域名注册价格
-                     */
-                    'register'     => $item['premiumRegistrationPrice'],
-                    /**
-                     * 域名续费价格
-                     */
-                    'renew'        => $item['premiumRenewPrice'],
-                    /**
-                     * 货币代码
-                     */
-                    'CurrencyCode' => 'USD',
+                    'register' => $item['premiumRegistrationPrice'], // 域名注册价格
+                    'renew' => $item['premiumRenewPrice'], // 域名续费价格
+                    'CurrencyCode' => 'USD', // 货币代码
                 ]);
             }
 
@@ -695,7 +675,7 @@ function DemoRegistrar_GetRegistrarLock($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -734,7 +714,7 @@ function DemoRegistrar_SaveRegistrarLock($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -775,7 +755,7 @@ function DemoRegistrar_GetDNS($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 发起请求
@@ -790,22 +770,10 @@ function DemoRegistrar_GetDNS($vars)
         foreach ($response as $item)
         {
             $result[] = [
-                /**
-                 * 记录值, 例如: www
-                 */
-                "hostname" => $item['name'],
-                /**
-                 * 记录类型, 例如: A
-                 */
-                "type"     => $item['type'],
-                /**
-                 * 解析内容: 例如: 127.0.0.1
-                 */
-                "address"  => $item['address'],
-                /**
-                 * MX 优先级, 例如: 10
-                 */
-                "priority" => $item['mxpref'],
+                "hostname" => $item['name'], // 记录值, 例如: www
+                "type" => $item['type'], // 记录类型, 例如: A
+                "address" => $item['address'], // 解析内容: 例如: 127.0.0.1
+                "priority" => $item['mxpref'], // MX 优先级, 例如: 10
             ];
         }
 
@@ -837,7 +805,7 @@ function DemoRegistrar_SaveDNS($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -878,7 +846,7 @@ function DemoRegistrar_IDProtectToggle($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -919,7 +887,7 @@ function DemoRegistrar_GetEPPCode($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -935,15 +903,11 @@ function DemoRegistrar_GetEPPCode($vars)
         /**
          * 返回成功
          */
-        return $eppCode
-            ? [
-                'eppcode' => $eppCode
-                // 有返回 EPP Code 则返回
-            ]
-            : [
-                'success' => 'success'
-                // 未返回 ( 或通过邮件发送 ) EPP Code, 但成功了, 那么可以返回这个
-            ];
+        return $eppCode ? [
+            'eppcode' => $eppCode// 有返回 EPP Code 则返回
+        ] : [
+            'success' => 'success'// 未返回 ( 或通过邮件发送 ) EPP Code, 但成功了, 那么可以返回这个
+        ];
     }
     catch (Exception $e)
     {
@@ -971,7 +935,7 @@ function DemoRegistrar_ReleaseDomain($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1012,7 +976,7 @@ function DemoRegistrar_RequestDelete($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1053,7 +1017,7 @@ function DemoRegistrar_RegisterNameserver($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1094,7 +1058,7 @@ function DemoRegistrar_ModifyNameserver($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1135,7 +1099,7 @@ function DemoRegistrar_DeleteNameserver($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1176,7 +1140,7 @@ function DemoRegistrar_Sync($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1188,14 +1152,10 @@ function DemoRegistrar_Sync($vars)
          * 返回结果
          */
         return [
-            'expirydate'      => date('Y-m-d'),
-            // 格式必须是 YYYY-MM-DD
-            'active'          => true,
-            // 可用状态, 布尔值
-            'expired'         => true,
-            // 过期状态, 布尔值
-            'transferredAway' => true,
-            // 已转出, 布尔值
+            'expirydate' => date('Y-m-d'), // 格式必须是 YYYY-MM-DD
+            'active' => true, // 可用状态, 布尔值
+            'expired' => true, // 过期状态, 布尔值
+            'transferredAway' => true,// 已转出, 布尔值
         ];
     }
     catch (Exception $e)
@@ -1224,7 +1184,7 @@ function DemoRegistrar_TransferSync($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1240,9 +1200,8 @@ function DemoRegistrar_TransferSync($vars)
         if ($status === '成功')
         {
             return [
-                'completed'  => true,
-                'expirydate' => date('Y-m-d'),
-                // 格式必须是 YYYY-MM-DD
+                'completed' => true,
+                'expirydate' => date('Y-m-d'), // 格式必须是 YYYY-MM-DD
             ];
         }
         else if ($status === '失败')
@@ -1310,7 +1269,7 @@ function DemoRegistrar_DemoFunction($vars)
          * 传入信息
          */
         print_r($vars);
-        die(); // 可执行慈航打印展示
+        die(); // 可执行测试打印展示
 
         /**
          * 需要处理的内容
@@ -1349,7 +1308,7 @@ function DemoRegistrar_ClientArea($vars)
      * 传入信息
      */
     print_r($vars);
-    die(); // 可执行慈航打印展示
+    die(); // 可执行测试打印展示
 
     /**
      * 需要处理的内容

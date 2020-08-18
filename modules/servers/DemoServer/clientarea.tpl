@@ -1,1 +1,1 @@
-Demo Servers
+Demo Server Template

@@ -1,1 +1,1 @@
-Demo Addon
+Demo Addon Template

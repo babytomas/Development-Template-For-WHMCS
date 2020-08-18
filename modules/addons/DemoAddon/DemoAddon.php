@@ -2,7 +2,7 @@
 /**
  * 禁止 WHMCS 外直接访问
  */
-defined("WHMCS") OR die('Access Denied');
+defined('WHMCS') OR die('Access Denied');
 
 /**
  * 模块配置
@@ -15,7 +15,7 @@ function DemoAddon_Config()
         /**
          * 模块名称
          */
-        'name'        => '演示模块',
+        'name' => '演示模块',
         /**
          * 模块描述
          */
@@ -23,82 +23,82 @@ function DemoAddon_Config()
         /**
          * 模块版本
          */
-        'version'     => '1.0',
+        'version' => '1.0',
         /**
          * 模块作者
          */
-        'author'      => '极霸创新',
+        'author' => '极霸创新',
         /**
          * 默认语言
          */
-        'language'    => 'chinese',
+        'language' => 'chinese',
         /**
          * 配置项目
          */
-        'fields'      => [
+        'fields' => [
             /**
              * 文字输入框
              */
-            'text'     => [
+            'text' => [
                 'FriendlyName' => '文字输入框',
-                'Type'         => 'text',
-                'Size'         => '25',
-                'Default'      => '',
-                'Description'  => '内容较短时可以使用此组件',
+                'Type' => 'text',
+                'Size' => '25',
+                'Default' => '',
+                'Description' => '内容较短时可以使用此组件',
             ],
             /**
              * 密码输入框
              */
             'password' => [
                 'FriendlyName' => '密码输入框',
-                'Type'         => 'password',
-                'Size'         => '25',
-                'Default'      => '',
-                'Description'  => '需要收集密码时可使用此组件',
+                'Type' => 'password',
+                'Size' => '25',
+                'Default' => '',
+                'Description' => '需要收集密码时可使用此组件',
             ],
             /**
              * 多选框
              */
             'checkbox' => [
                 'FriendlyName' => '多选框',
-                'Type'         => 'yesno',
-                'Description'  => '需要使用布尔型内容时可使用此组件',
+                'Type' => 'yesno',
+                'Description' => '需要使用布尔型内容时可使用此组件',
             ],
             /**
              * 下拉框
              */
             'dropdown' => [
                 'FriendlyName' => '下拉框',
-                'Type'         => 'dropdown',
-                'Options'      => [
+                'Type' => 'dropdown',
+                'Options' => [
                     '选项1',
                     '选项2',
                     '选项...'
                 ],
-                'Description'  => '有多个选项但只能单选, 需要下拉框时可以使用此组件',
+                'Description' => '有多个选项但只能单选, 需要下拉框时可以使用此组件',
             ],
             /**
              * 单选框
              */
-            'radio'    => [
+            'radio' => [
                 'FriendlyName' => '单选框',
-                'Type'         => 'radio',
-                'Options'      => [
+                'Type' => 'radio',
+                'Options' => [
                     '选项1',
                     '选项2',
                     '选项...'
                 ],
-                'Description'  => '有多个选项但只能单选时可以使用此组件',
+                'Description' => '有多个选项但只能单选时可以使用此组件',
             ],
             /**
              * 文字区输入框
              */
             'textarea' => [
                 'FriendlyName' => '文字区输入框',
-                'Type'         => 'textarea',
-                'Rows'         => '3',
-                'Cols'         => '60',
-                'Description'  => '比较多的文字内容可使用此组件',
+                'Type' => 'textarea',
+                'Rows' => '3',
+                'Cols' => '60',
+                'Description' => '比较多的文字内容可使用此组件',
             ],
         ]
     ];
@@ -121,14 +121,8 @@ function DemoAddon_Activate()
      * 返回结果
      */
     return [
-        /**
-         * 操作状态 ( 包含 success / error / info 三种 )
-         */
-        'status'      => 'success',
-        /**
-         * 描述信息
-         */
-        'description' => '激活成功'
+        'status' => 'success', // 操作状态 ( 包含 success / error / info 三种 )
+        'description' => '激活成功' // 描述信息
     ];
 }
 
@@ -149,14 +143,8 @@ function DemoAddon_Dectivate()
      * 返回结果
      */
     return [
-        /**
-         * 操作状态 ( 包含 success / error / info 三种 )
-         */
-        'status'      => 'success',
-        /**
-         * 描述信息
-         */
-        'description' => '激活成功'
+        'status' => 'success', // 操作状态 ( 包含 success / error / info 三种 )
+        'description' => '关闭成功' // 描述信息
     ];
 }
 
@@ -171,7 +159,7 @@ function DemoAddon_OutPut($vars)
      * 传入信息
      */
     print_r($vars);
-    die(); // 可执行慈航打印展示
+    die(); // 可执行测试打印展示
 
     /**
      * 输出内容
@@ -192,7 +180,7 @@ function DemoAddon_ClientArea($vars)
      * 传入信息
      */
     print_r($vars);
-    die(); // 可执行慈航打印展示
+    die(); // 可执行测试打印展示
 
     /**
      * 需要处理的内容
@@ -207,11 +195,11 @@ function DemoAddon_ClientArea($vars)
         /**
          * 页面标题
          */
-        'pagetitle'    => '演示模块',
+        'pagetitle' => '演示模块',
         /**
          * 面包屑导航
          */
-        'breadcrumb'   => [
+        'breadcrumb' => [
             'index.php?m=Demo_Addons' => 'Demo Addons'
         ],
         /**
@@ -225,11 +213,11 @@ function DemoAddon_ClientArea($vars)
         /**
          * 是否强制 SSL 访问
          */
-        'forcessl'     => false,
+        'forcessl' => false,
         /**
          * 传给 Smarty 的变量
          */
-        'vars'         => [
+        'vars' => [
             'a' => 'b',
             'c' => 'd'
         ]
